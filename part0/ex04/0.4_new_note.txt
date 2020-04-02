@@ -1,0 +1,41 @@
+#https://fullstackopen.com/en/part0/fundamentals_of_web_apps#exercises-0-1-0-6
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+server-->browser: HTML-code
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server-->browser: main.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server 
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+
+browser->server: HTTP POST request to the server address *new_note*.   https://fullstack-exampleapp.herokuapp.com/notes
+note over browser:
+user creates a new note on page
+writing something into the text field and clicking the submit button.
+submitting the form causes altogether five HTTP requests
+end note
+server-->server: Data is sent as the body of the POST-request. 
+note over server
+The Server creates a new note object, and adds it to an array called notes.
+end note over server
+
+
+server-->browser: The server responds with HTTP status code 302.
+note over browser: The server instructs the browser to reload the Notes page with URL redirect.
+note over server:
+The server does not save new notes to a database, so new notes disappear when Heroku restarts the service.
+end note over server
+
