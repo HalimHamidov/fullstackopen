@@ -22,12 +22,13 @@ The data is sent to the server with form submit,
 and the server instructs the browser to reload the Notes page with a redirect.
 end note
 
+#-----------------------------------------
 
 browser->server: HTTP POST Request URL: https://fullstack-exampleapp.herokuapp.com/new_note_spa 
-note over browser: When you now create a new note, the browser sends only one request to the server.
+note over browser: When you create a new note, the browser sends only one request to the server.
 end note
 
-server --> server: 
+server --> server: new_note_spa
 note over server:
 The server responds with statuscode *201 Created*. 
 This time the server does not ask for a redirect, 
