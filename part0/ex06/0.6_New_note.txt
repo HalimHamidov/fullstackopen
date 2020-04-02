@@ -18,7 +18,7 @@ server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
 note over browser:
 browser executes the event handler
 that renders notes to display.
-The data is sent to the server with form submit, 
+The data is sent to the server with form submit,    
 and the server instructs the browser to reload the Notes page with a redirect.
 end note
 
