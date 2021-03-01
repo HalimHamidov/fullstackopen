@@ -1,0 +1,14 @@
+{
+  "persons": [
+    {
+      "name": "Halim Hamidov",
+      "number": "89879874987494",
+      "id": 1
+    },
+    {
+      "name": "Zafar Hamidov",
+      "number": "999987984896",
+      "id": 2
+    }
+  ]
+}
